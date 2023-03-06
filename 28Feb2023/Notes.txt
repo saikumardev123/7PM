@@ -1,0 +1,35 @@
+Objects:
+
+A Javascript object is a collection of key-value pairs of an entity.
+
+syntax:
+
+ var obj = {
+     key : value 
+ }
+
+ where key must be a string and value can be of any data type. 
+
+  keys should be unique.
+
+var user= {
+    firstName: "Kiran", 
+    surName: "raj",
+    mobileNumberOrEmailAddress: "9010101010",
+    password: "mdbvknvvkfv",
+    dateOfBirth: {
+            date: 28,
+            month:2,
+            year:1997
+    }
+}
+console.log(user);
+console.log(user.firstName);
+console.log(user.surName);
+console.log(user.dateOfBirth.year);
+
+
+Problem Statement:
+
+title, imageUrls, Highlights, specifications (array) -> general,display_features.
+

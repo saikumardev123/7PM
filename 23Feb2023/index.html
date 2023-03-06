@@ -1,0 +1,34 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <input type="text" id="username" placeholder="username here">
+    <input type="text" id="password" placeholder="password here">
+    <button onclick="login()">Login</button>
+
+    <script>
+
+        function login() {
+
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            var usernameInDB = "sai123";
+            var passwordInDB = "sai321";
+
+            if (username == usernameInDB && password == passwordInDB) {
+                console.log("login success");
+            }
+            else {
+                console.log("login failure");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

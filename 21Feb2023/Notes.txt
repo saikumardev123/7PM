@@ -1,0 +1,59 @@
+Javascript:
+
+Initally, JS was developed as a scripting language and later JS has become programming 
+language. 
+
+Brendan developed JS in 10 days to support netscape navigator browser. 
+
+Inital name of JS was LiveScript. 
+
+Scripting Language: Any language that does not have compilation and the code gets 
+automatically interpreted at runtime, such languages are known as scripting languages. 
+
+The main purpose of Javascript is to develop dynamic web pages. 
+
+Application areas where JS can be used. 
+
+1. Client side application development 
+2. Server side application development  (Node.js, Express.js...)
+3. Aritifical Intelligence 
+4. IOT(Internet of Things)
+5. Block Chain
+
+JS was standardized by ECMA(Eurpoeam Computers Manufacturers Association), 
+
+JS can also be called as ECMAScript. 
+
+First JS app:
+
+<html>
+
+<head>
+
+    <script>
+
+        alert("From head ")
+    </script>
+
+</head>
+
+<body>
+
+
+    <script>
+
+        alert("From body");
+
+    </script>
+
+</body>
+
+</html>
+
+
+How does browser execute a html program?
+
+
+
+
+

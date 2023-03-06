@@ -1,0 +1,192 @@
+Data Types:
+
+
+There are 2 types of data types in js.
+
+1. primitive types :
+
+  number, boolean, string
+
+   // number
+
+        var age = 21;
+        console.log(age);
+        console.log(typeof age);
+
+        var rating = 4.1;
+        console.log(rating);
+        console.log(typeof rating);
+
+        // boolean  - true / false
+
+        var isDone = false;
+        console.log(isDone);
+        isDone = true;
+
+        if (isDone) {
+            console.log("Take rest");
+        }
+
+string: String is a collection of characters enclosed in double or 
+        single quotes. 
+
+  var str = "hello";
+        var str1 = 'world';
+
+        console.log(str);
+        console.log(str1);
+        console.log(typeof str);
+        console.log(typeof str1);
+
+In JS, strings are immutable which means once you create a string you 
+cannot modify it however you can reassign the value incase if we want to 
+update the string variable.
+
+ var firstName = "digital";
+        var lastName = "lync";
+        firstName.concat(lastName);
+        console.log(firstName);//
+
+JS provides different types of functions. 
+
+Problem Statement: Mimic the functionality of gmail accepting the 
+usernames for login.
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <input type="text" size="50" id="username" placeholder="enter username /email here">
+    <button onclick="next()">Next</button>
+
+    <script>
+        function next() {
+            var username = document.getElementById("username").value;
+            console.log(username);
+            username = username.trim();
+            username = username.toLowerCase();
+            if (username.includes("@gmail.com")) {
+
+            }
+            else {
+                username = username.concat("@gmail.com");
+            }
+
+            document.getElementById("username").value = username;
+        }
+    </script>
+
+</body>
+
+</html>
+
+Problem Statement: 
+
+Check if the password length is less than 8, if yes, display an 
+approprite msg. 
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="text" id="password" placeholder="password">
+        <button onClick="password()">submit</button>
+        <script>
+
+            function password(){
+
+                var password = document.getElementById('password').value;
+                password = password.trim();
+                console.log(password);
+
+                if(password.length < 8){
+                    alert('password length is < 8 characters so please add greater than 8');
+                }else{
+                    alert('Valid password');
+                }
+
+            }
+
+        </script>
+    </body>
+</html>
+
+2. non-primitive types:
+
+   arrays and strings
+
+   Arrays: An array is a linear data structure which is used to store the data in a sequential format.
+
+   in JS, Arrays can store different types of items / values. 
+
+   syntax: 
+
+   var array = [values];
+
+    var array = [10, 20, 30, 40, 50, "abc", "xyz", 90, true, false];
+        console.log(array);
+
+  Array index starts from 0.
+   
+
+ var array = [10, 20, 30, 40, 50, "abc", "xyz", 90, true, false];
+        console.log(array[1]);
+        console.log(array[5]);
+        console.log(array[12]);
+        array.unshift(5);
+        array.push(200);
+        array.pop();
+        array.pop();
+        array.pop();
+        array.shift();
+        array.shift();
+        var index = array.indexOf("abc");
+        array.splice(index, 1);
+        console.log(array);
+
+
+Problem Statement: 
+
+var users= ["kiran","rajesh","naveen"];
+
+create a username field and accept the username and cross check if it available in users array. 
+
+if its there in users array, display "username already taken" else "username available"
+  
+
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <input type="text" size="50" id="username" placeholder="enter username /email here">
+    <button onclick="next()">Next</button>
+
+    <script>
+        function next() {
+            var username = document.getElementById("username").value;
+            console.log(username);
+            var users = ["kiran", "rajesh", "nikhil"];
+            if (users.includes(username)) {
+                alert("username is already taken");
+            }
+            else {
+                alert("username is available");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+
+

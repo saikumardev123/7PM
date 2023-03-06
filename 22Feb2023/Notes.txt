@@ -1,0 +1,157 @@
+Variables:
+
+A variable is an identifier which is used to refer/ store some data. 
+
+Every application accepts the data from the user and this data will be processed 
+based on the logic written. So, to identify the data for processing, 
+we use variables.
+
+syntax: var var_name = data;
+
+var username = "sai";
+
+var password= "12444";
+
+var email = "jsdksd@gmail.com";
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+        var age = 21;
+        var address = "hyderabad";
+        console.log(age);
+        console.log(address);
+    </script>
+
+</body>
+
+</html>
+
+We can categorize variables into 2 types.
+
+1. local variables : If we create a variable inside a function, then 
+it is known as local variable.
+
+
+        function f1() {
+            var a = 10; // local variable
+            var b = 20; // local variable
+            console.log(a);
+            console.log(b);
+        }
+        f1();
+
+    The scope of the local variables is with in the function, hence they 
+    can be accessed only inside the function and cannot be accessed 
+    outisde of the function.    
+
+2. global variables : if we create a variable outside of the function, 
+then it is known as global variable. 
+
+  var a = 10; // global variable
+        var b = 20; // global variable
+
+        function f1() {
+            console.log(a); // 10
+            console.log(b); // 20
+        }
+        f1();
+        console.log(a); // 10
+        console.log(b); // 20
+
+code:
+
+
+        var a = 10; // global variable
+        var b = 20; // global variable
+
+        function f1() {
+            var a = 1; // local variable
+            var b = 2; // local variable
+            console.log(a); // 1
+            console.log(b); // 2
+            console.log(window.a);
+            console.log(window.b);
+        }
+        f1();
+
+
+code:  accessing variables before the declaration.
+
+   var a = 10; // global variable
+        var b = 20; // global variable
+
+        function f1() {
+            console.log(a); //  undefined
+            console.log(b); // undefined 
+            var a = 1; // local variable
+            var b = 2; // local variable
+
+        }
+        f1();
+
+
+variable hoisting:
+
+It is a default process where all the global variable declaration are 
+taken to the top before the execution begins. 
+
+
+   console.log(a); //
+        console.log(b); //
+
+        var a = 9;
+        var b = 20;
+
+        /*
+            after variable hoisting:
+
+           var a,b; // undefined, undefined
+           console.log(a); // undefined
+        console.log(b); // undefined
+
+         a = 9;
+         b = 20;
+
+
+
+        */
+
+code:
+
+  var a = 10; // global variable
+        var b = 20; // global variable
+
+        function f1() {
+            console.log(a); //  undefined
+            console.log(b); // undefined 
+            var a = 1; // local variable
+            var b = 2; // local variable
+
+        }
+        f1();
+
+        /*
+
+          var a,b;
+            a = 10; // global variable
+            b = 20; // global variable
+
+        function f1() {
+            var a,b; // undefined, undefined
+            console.log(a); //  undefined
+            console.log(b); // undefined
+             a = 1; // local variable
+             b = 2; // local variable
+
+        }
+        f1();
+        */
+
+

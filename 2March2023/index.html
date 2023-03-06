@@ -1,0 +1,39 @@
+<html>
+<head>
+
+</head>
+<body>
+
+  <select onchange="showCities()" id="state">
+    <option value="">select state</option>
+    <option value="TS">TS</option>
+    <option value="AP">AP</option>
+    <option value="KA">KA</option>
+
+  </select>
+
+  <h1 id="cities"></h1>
+
+<script>
+
+
+
+function showCities(){
+   var state =  document.getElementById("state").value;
+   var cities = document.getElementById("cities");
+    switch(state){
+      case "TS": cities.innerHTML = "Hyderabad, Secunderabad"; break;
+      case "AP": cities.innerHTML = "Vizag, Guntur"; break;
+      case "KA": cities.innerHTML = "Banglore, Mysore"; break;
+      
+    }
+
+}
+
+
+   
+
+</script>
+
+</body>
+</html>

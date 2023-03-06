@@ -1,0 +1,167 @@
+Problem Statement:
+
+Implement a login system with username and password. 
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <input type="text" id="username" placeholder="username here">
+    <input type="text" id="password" placeholder="password here">
+    <button onclick="login()">Login</button>
+
+    <script>
+
+        function login() {
+
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            var usernameInDB = "sai123";
+            var passwordInDB = "sai321";
+
+            if (username == usernameInDB && password == passwordInDB) {
+                console.log("login success");
+            }
+            else {
+                console.log("login failure");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+
+
+Problem Statemnt:
+
+Create a feedback form with email (input) and description(textarea), 
+capture the entered details and display in console using JS. 
+
+<html>
+    <head></head>
+    <body>
+    <input type="text" id="email" placeholder="email here"><br>
+    <textarea name="" cols="30" rows="10" placeholder="description here" id="description"></textarea>
+    <button onclick="login()">Login</button>
+
+    <script>
+
+        function login() {
+
+            var email = document.getElementById("email").value;
+            var description = document.getElementById("description").value;
+
+            console.log(email);
+            console.log(description);
+        }
+    </script>
+
+</body>
+
+</html>
+    </body>
+</html>
+
+Problem Statement: 
+
+Implement likes count of youtube. 
+
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <i onclick="likes()" class="fa fa-thumbs-up" style="font-size:36px"></i> <span id="like_count">0</span>
+
+    <script>
+
+        var counter = 0;
+
+        function likes() {
+
+            counter = counter + 1;
+
+            document.getElementById("like_count").innerHTML = counter;
+
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
+
+
+Problem Statement:
+
+Implement Like and dislike icon , when we click on Like , increment the like by 1 and clikc on dislike 
+then decrement the counter by 1 and make sure the count should not go beyond 0. 
+
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <i onclick="likes()" class="fa fa-thumbs-up" style="font-size:36px"></i> <span id="like_count">0</span>
+    <i onclick="dislikes()" class="fa fa-thumbs-down" style="font-size:36px"></i>
+
+    <script>
+
+        var counter = 0;
+
+        function likes() {
+
+            counter = counter + 1;
+
+            document.getElementById("like_count").innerHTML = counter;
+
+
+        }
+
+        function dislikes() {
+
+            counter = counter - 1;
+
+            if (counter < 0) {
+                counter = 0;
+                document.getElementById("like_count").innerHTML = counter;
+            } else {
+                document.getElementById("like_count").innerHTML = counter;
+            }
+
+
+
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
+
+
+Problem Statement: 
+
+Create an empty heart icon and when user click on heart icon, convert it 
+into full heart and vice versa. 
+

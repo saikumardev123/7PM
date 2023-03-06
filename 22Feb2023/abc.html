@@ -1,0 +1,28 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+        var a, b;
+        a = 10; // global variable
+        b = 20; // global variable
+
+        function f1() {
+            var a, b; // undefined, undefined
+            console.log(a); //  undefined
+            console.log(b); // undefined
+            a = 1; // local variable
+            b = 2; // local variable
+
+        }
+        f1();
+
+    </script>
+
+</body>
+
+</html>

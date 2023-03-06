@@ -1,0 +1,154 @@
+Operators:
+
+JS provides different Operators such as 
+
+Arithmetic Operators:
+
+ +,-,*,/(QUOTIENT),%(REMAINDER),++,--
+
+ <html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+        var a = 100;
+        console.log(a++); // print 100, a=101
+        console.log(++a); // a=102, print 102
+        console.log(a--); // print 102, a=101
+        console.log(--a);// a=100, print 100
+        console.log(a); // 100
+    </script>
+
+</body>
+
+</html>
+
+
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+        var a = 100, b = "200", c = "300", d = 10, e = "100s";
+        console.log(a + b);
+        console.log(c + b + a);
+        console.log(a + b + d);
+        console.log(a + d + c);
+        console.log(a - b);
+        console.log(b * d);
+        console.log(a - e);
+        console.log(e - b);
+
+    </script>
+
+</body>
+
+</html>
+
+
+Comparision operators:
+
+>,<,>=,<=,==,===,!=,?:
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+
+        var a = 100, b = "200", c = "100", e = "7xe"; d = 90;
+
+        console.log(a > d);
+        console.log(a < d);
+        console.log(a > c);
+        console.log(a >= c);
+        console.log(a <= c);
+        console.log(a > e);
+        console.log(a == c); // looks only for content
+        console.log(a === c); // looks for content and datatype
+        a < d ? console.log("a is less than d") : console.log("a is greater than d");
+    </script>
+
+</body>
+
+</html>
+
+
+Problem Statement:
+
+implement login system using ternary operator.
+
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <input type="text" placeholder="enter username" id="username">
+        <input type="text" placeholder="enter password" id = "password">
+        <button onClick="data()">Submit</button>
+
+        <script>
+
+            function data(){
+
+                var userdb = "mounika1";
+                var passdb = "1234";
+
+                var username = document.getElementById('username').value;
+                var password = document.getElementById('password').value;
+
+                username == userdb && password == passdb ? alert('login success') : alert('login failed');
+
+
+
+              
+
+            }
+
+         
+
+        </script>
+       
+    </body>
+</html>
+
+
+logical operators:
+
+we have 3 logical operators:
+
+Logical AND(&&), OR(||), NOT(!)
+
+       var a = 100, b = 200, c = 300;
+        console.log(a < b && b < c);
+        console.log(a > b && b < c);
+        console.log(a > b || b < c);
+        console.log(!true);
+
+
+Problem Statement: 
+
+Create a simple calculator with the following features. 
+addition, subtraction, multiplication, square, cube 
+
+create 2 fields 
+
+[number1]   [number2]   
+
+<add>  <sub>  <mul>  <square>  <cube> 
+
+

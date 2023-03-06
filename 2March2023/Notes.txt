@@ -1,0 +1,104 @@
+Control Statements:
+
+1. Sequential Statements :  if, if-else, switch
+2. Iterative Statements: while, do-while and for
+3. Jump Statements: break, continue and return 
+
+if-else:
+
+syntax:
+
+ if(test-condition){
+
+ }
+ else{
+
+ }
+
+
+switch:
+
+  syntax:
+   
+     switch(test-condition){
+        case "case-value1" : //code; 
+        case "case-value2" : //code; 
+        case "case-value3" : //code;
+        .
+        .
+        .
+        case "case-valuen": //code 
+        default: //code
+     }
+
+
+<html>
+<head>
+
+</head>
+<body>
+
+<script>
+
+
+    var course= "java124";
+
+    switch(course){
+
+      case "java": console.log("You chose Java"); break;
+      case "dotnet": console.log("You chose dot net"); break;
+      case "react": console.log("you chose react"); break;
+      default:  console.log("this course is n/a");
+    }
+
+
+</script>
+
+</body>
+</html>
+
+
+Problem Statement:
+
+ Create a list of states- 4 (DROP DOWNL list), based on the user selection, display 2 cities 
+ of that state on the UI. 
+
+<html>
+<head>
+
+</head>
+<body>
+
+  <select onchange="showCities()" id="state">
+    <option value="">select state</option>
+    <option value="TS">TS</option>
+    <option value="AP">AP</option>
+    <option value="KA">KA</option>
+
+  </select>
+
+  <h1 id="cities"></h1>
+
+<script>
+
+
+
+function showCities(){
+   var state =  document.getElementById("state").value;
+   var cities = document.getElementById("cities");
+    switch(state){
+      case "TS": cities.innerHTML = "Hyderabad, Secunderabad"; break;
+      case "AP": cities.innerHTML = "Vizag, Guntur"; break;
+      case "KA": cities.innerHTML = "Banglore, Mysore"; break;
+      
+    }
+
+}
+
+
+   
+
+</script>
+
+</body>
+</html>

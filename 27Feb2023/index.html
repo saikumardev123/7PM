@@ -1,0 +1,28 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <input type="text" size="50" id="username" placeholder="enter username /email here">
+    <button onclick="next()">Next</button>
+
+    <script>
+        function next() {
+            var username = document.getElementById("username").value;
+            console.log(username);
+            var users = ["kiran", "rajesh", "nikhil"];
+            if (users.includes(username)) {
+                alert("username is already taken");
+            }
+            else {
+                alert("username is available");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

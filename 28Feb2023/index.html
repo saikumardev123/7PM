@@ -1,0 +1,62 @@
+<html>
+
+<head>
+
+</head>
+
+ <body>
+
+     <div>
+
+     <h1 id="title"></h1>
+
+     <img id="img">
+ 
+     </div>
+
+    <script>
+
+
+var product = {
+    title: "SAMSUNG M5 32 inch Full HD LED Backlit VA Panel with embedded TV Apps, PC-less productivity with Samsung DeX, Office 365, Google Duo app, and IoT Hub, Built-in Speakers, Ultrawide Game View Smart Monitor (LS32BM501EWXXL)  (Response Time: 4 ms, 60 Hz Refresh Rate)",
+    images: [
+        "https://rukminim1.flixcart.com/image/416/416/l3vxbbk0/monitor/p/h/z/wifi-netflix-youtube-prime-video-and-apple-tv-streaming-original-imagewsnc5ymagry.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/128/128/l3vxbbk0/monitor/g/a/r/wifi-netflix-youtube-prime-video-and-apple-tv-streaming-original-imagewsnn5yb5d4f.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/128/128/l3vxbbk0/monitor/n/u/x/wifi-netflix-youtube-prime-video-and-apple-tv-streaming-original-imagewsnvjsgruhs.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/128/128/kyt0ya80/monitor/c/4/m/with-netflix-youtube-prime-video-and-apple-tv-streaming-original-imagayey3edgkyyx.jpeg?q=70"
+    ],
+    price:20999,
+    highlights: ["Panel Type: VA Panel",
+"Screen Resolution Type: Full HD",
+"Brightness: 250 nits",
+"Response Time: 4 ms | Refresh Rate: 60 Hz",
+"HDMI Ports - 2"],
+specifications: [
+    {
+        general :  {
+               modelName: "LS32BM501EWXXL",
+               series: "M5",
+               color: "white"
+        }
+    },
+    {
+        displayFeatures: {
+            maxRefreshRate: "60Hz",
+            maximum3DRefreshRate: "200Hz"
+        }
+    },
+    {
+        audioFeatures: {
+            speakers: "Yes, 2 Speakers"
+        }
+    }
+]
+}
+
+ document.getElementById("title").innerHTML = product.title;
+ document.getElementById("img").src=product.images[0];
+    </script>
+
+ </body>
+
+</html>
