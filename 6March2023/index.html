@@ -11,7 +11,7 @@
     <input type="text" id="pid" placeholder="product id"> <br><br>
     <input type="text" id="name" placeholder="product name"> <br><br>
     <input type="text" id="price" placeholder="product price"> <br><br>
-    <button onclick="addProduct()">Add Product</button>
+    <button id="addOrSave" onclick="addProduct()">Add Product</button>
 
     <ul id="list">
 
@@ -30,6 +30,7 @@
             }
             productsList.push(product);
             console.log(productsList);
+            clearFields();
             showProducts();
         }
 
@@ -59,15 +60,45 @@
 
         function updateProduct(productId) {
             console.log("productid", productId);
+            var index = 0;
+            while (index < productsList.length) {
+                var product = productsList[index];
+                if (product.productId == productId) {
+                    document.getElementById("pid").value = productId;
+                    document.getElementById("name").value = product.productName;
+                    document.getElementById("price").value = product.productPrice;
+                    break;
+                }
+                index++;
+            }
+
+            var addOrSave = document.getElementById("addOrSave");
+            addOrSave.innerHTML = "Save Product";
+            addOrSave.setAttribute('onclick', "saveProduct()");
+
         }
 
-        /*
+        function saveProduct() {
+            // logic
 
+            // capture the form data 
+            // find the product from array based on pid
+            // update the product with captured values 
+            // togle the button from save to add
+            // call show products 
+
+        }
+
+
+        function clearFields() {
+            document.getElementById("pid").value = "";
+            document.getElementById("name").value = "";
+            document.getElementById("price").value = "";
+        }
+        /*
           1. clear all the fields once the product is added
           2. when we click on update, populate the product details
           in the form.
-
-
         */
     </script>
 </body>
