@@ -1,0 +1,41 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <input type="text" onkeyup="validate()" id="username" placeholder="enter username">
+
+    <span id="message"></span>
+
+
+    <script>
+
+        function validate() {
+
+            var message = document.getElementById("message");
+
+            var username = document.getElementById("username").value;
+
+            if (username.length == 0) {
+                console.log("length check");
+                message.innerHTML = "username cannot be empty";
+                return;
+            }
+            if (username.includes(" ")) {
+                console.log("space check")
+                message.innerHTML = "username cannot have space";
+                return;
+            }
+            console.log("I am here");
+            message.innerHTML = "";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

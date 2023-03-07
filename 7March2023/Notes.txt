@@ -1,0 +1,102 @@
+Jump Statements:
+
+break, continue and return
+
+break: used to terminate a block. 
+
+continue: to skip an iteration.
+
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+
+        for (var i = 0; i < 10; i++) {
+            if (i == 2) {
+                continue;
+            }
+            console.log(i);
+        }
+
+    </script>
+
+</body>
+
+</html>
+
+
+PS: 
+
+var arr=[10,9,20,22,21,21,10,9,20,22,21,9,8,8,8,8]
+
+logic to remove duplicate values from above array. 
+
+note: use continue.
+
+return: to terminate a function. 
+
+return:
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+
+        function f1() {
+            var a = 100;
+            if (a < 200) {
+                console.log(a);
+                return;
+            }
+            console.log(a * a);
+            console.log(a * a * a);
+        }
+        f1();
+
+    </script>
+
+</body>
+
+</html>
+
+PS: Validate the username with the following constraints. 
+
+1. should not be empty 
+2. should not have a space 
+3. should be atleast 5 chars 
+
+note: as in when the user entering the text, we should give appropriate 
+validation messages. 
+
+hint: onkeyup
+
+
+ <input type-"text" id="username" onkeyup="validate()" >
+
+ function validate(){
+     // logic
+
+    var value =  doc.get("usernamee").value
+ }
+
+
+
+
+
+
+
+
+
+
+
