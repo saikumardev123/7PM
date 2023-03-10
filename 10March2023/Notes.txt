@@ -1,0 +1,53 @@
+First class functions:
+
+In JS, the functions are given the top most priority because JS encourages 
+the developers to implement functionality of an application using 
+functions.
+
+In JS, A function can be passed as an argument, store the function in a variable
+and we can return a function from another functions. 
+
+IIFE: Immediately invoked function expression. 
+
+Sometimes, we need a function to be automatically executed irrespective of 
+calling it and this function should be executed only once. 
+
+These can also be called as self invoking functions.
+
+syntax:
+
+ (function(){
+ // code
+ })();
+
+
+ <html>
+<head>
+
+</head>
+
+ <body>
+
+     <script>
+
+           (function(){
+               console.log("I am IIFE");
+           })();
+
+     </script>
+
+ </body>
+</html>
+
+
+Web Services:
+
+A service(resource) that can be accessible over web is known as 
+web service. 
+
+PVR Cinemas - 9 30 pm - 10 tickets - 5 - 2 - 1
+
+BMS  - p1 - 5 tickets - p5 - 0 tickets
+PayTM - p2 - 3 tickets
+PVR  - p3 - 1 ticket
+JustTickets - p4 - 1 ticket

@@ -1,0 +1,28 @@
+<html>
+<head>
+
+</head>
+
+ <body>
+
+     <script>
+
+           (function(){
+
+                 var http =  new XMLHttpRequest();
+                  http.open('get','https://jsonplaceholder.typicode.com/users');
+                  http.send();
+                  http.onreadystatechange = function(){
+                       if(http.readyState == 4){
+                           //console.log(http.responseText);
+                           var products=JSON.parse(http.responseText);
+                           console.log(products);
+                       }
+                  }
+
+           })();
+
+     </script>
+
+ </body>
+</html>
