@@ -1,0 +1,90 @@
+Call, Apply and Bind:
+
+Call:  used to invoke other object's function by substituting another object.
+
+ var user = {
+            name: "kiran",
+            password: "pass123",
+            userDetails: function () {
+                return this.name + "\t" + this.password;
+            }
+        }
+        console.log(user.userDetails());
+        var user2 = {
+            name: "ravi",
+            password: "ravikumar"
+        }
+        console.log(user.userDetails.call(user2));
+
+apply: 
+
+ var user = {
+            name: "kiran",
+            password: "pass123",
+            userDetails: function (x, y, z) {
+                return this.name + "\t" + this.password + "\t" + x + "\t" + y + "\t" + z;
+            }
+        }
+        console.log(user.userDetails());
+        var user2 = {
+            name: "ravi",
+            password: "ravikumar"
+        }
+        var arr = [10, 20, 30];
+        console.log(user.userDetails.call(user2, arr[0], arr[1], arr[2]));
+        console.log(user.userDetails.apply(user2, arr));
+
+
+Closures:
+
+A closure is an inner function which is used to create private functions in JS. 
+
+ function user(username, password) {
+            function login() { // closure scope
+                var otp = 8989;
+                if (username == "xyz" && password == "xyz") {
+                    console.log("login success");
+                    return otp;
+                }
+            }
+            return login;
+        };
+
+        console.log(user("xyz", "xyz")());
+
+
+call by value and call by reference:
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+
+        var x = 10;
+
+        function f1(y) {
+
+            console.log(y);
+            y = 200;
+
+        }
+        f1(x); // primitive types - call by value
+        console.log(x); // ?
+
+        var arr = [10, 20];
+
+        function f2(abc) {
+            abc.push(200);
+        }
+        f2(arr);// non primitive types (arrays, objects) - call by reference
+        console.log(arr.length);
+
+    </script>
+
+</body>
+
+</html>

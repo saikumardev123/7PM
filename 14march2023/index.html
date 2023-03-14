@@ -1,0 +1,33 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+
+        var x = 10;
+
+        function f1(y) {
+
+            console.log(y);
+            y = 200;
+
+        }
+        f1(x); // primitive types - call by value
+        console.log(x); // ?
+
+        var arr = [10, 20];
+
+        function f2(abc) {
+            abc.push(200);
+        }
+        f2(arr);// non primitive types (arrays, objects) - call by reference
+        console.log(arr.length);
+
+    </script>
+
+</body>
+
+</html>
