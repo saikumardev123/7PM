@@ -1,0 +1,42 @@
+ <script>
+
+        var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "hello", "how", "are", "you"];
+
+        // var x = arr.forEach(function (item) {
+        //     return typeof item == "string"
+        // })
+        // console.log(x);
+
+        var x = arr.filter(function (item) {
+            return typeof item == "string"
+        })
+        console.log(x);
+
+        var newArr = [0, 2, 3, 4, 5, 0, -2];
+
+        var result = newArr.filter(function (elm) {
+            return elm * 2; // 0 (false)
+        })
+        console.log(result);
+        console.log(newArr);
+
+        var arr2 = [0, 2, 3, 4, 5, 0, -2];
+        var r = arr2.map(function (elm) {
+            return elm * 2;
+        })
+        console.log(r);
+        console.log(arr2);
+    </script>
+
+</body>
+
+</html>
+
+
+
+Problem Statement:
+
+var arr= [10,20,40,12,34,12,13,14,14,13,34,22,56,89];
+
+remove the duplicates, arrange the data in ascending order and then descending order. 
+
