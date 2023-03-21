@@ -1,0 +1,85 @@
+Numbers:
+
+There are 2 ways to create a number in JS.
+
+1. using primitive type.
+2.using object.
+
+
+
+        var a = 100;
+        console.log(a);
+        console.log(typeof a);
+        var b = new Number(100);
+        console.log(b);
+        console.log(typeof b);
+
+        var rating = 4.1234;
+        console.log(rating.toFixed(1));
+        console.log(rating.toPrecision(2))
+
+Dates:
+
+JS provides date object to work with date and time related operations.
+
+ var date = new Date();
+        console.log(date);
+
+        console.log(date.getDate());
+        console.log(date.getMonth() + 1);
+        console.log(date.getFullYear());
+        console.log(date.getHours());
+        console.log(date.getMinutes());
+        console.log(date.getSeconds());
+
+
+PS: Create a timestamp using date. 
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+
+        // hh:mm:ss dd/mm/yyyy       
+
+        function timeStamp() {
+            var date = new Date();
+            var timeFormat = addZero(date.getHours()) + ":" + addZero(date.getMinutes()) + ":" + addZero(date.getSeconds());
+            var dateFormat = addZero(date.getDate()) + "/" + addZero((date.getMonth() + 1)) + "/" + addZero(date.getFullYear());
+            return timeFormat + "\t" + dateFormat;
+        }
+        console.log(timeStamp());
+
+        function addZero(input) {
+            if (input < 10) {
+                input = '0' + input;
+            }
+            return input;
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
+
+Problem Statement:
+
+ Take a text field, ask the user to enter the date and time 
+
+ find the differnce in no of seconds, minutes, hours, days, months, year. 
+
+ if diff is in seconds -> 10 seconds ago 
+
+ minutes -> 10 mins ago 
+
+ hours -> 10 hours ago
+
+

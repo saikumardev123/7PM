@@ -1,0 +1,126 @@
+Objects:
+
+Methods:
+
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+
+        // keys and values
+
+        var employee = {
+            name: "kiran",
+            address: "hyderabad",
+            eid: 101
+        }
+        var employeeObjkeys = Object.keys(employee);
+        console.log(employeeObjkeys);
+        var values = Object.values(employee);
+        console.log(values);
+
+        //freeze
+
+        var config = Object.freeze({
+            ipAddress: "198.11.123.11",
+            port_no: 9011,
+            username: "admin"
+        });
+        config.ipAddress = "0.0.0.0";
+        config.password = "******";
+        console.log(config);
+
+        // seal
+
+        var user = Object.seal({
+            name: "kiran",
+            address: "hyderabad",
+            adhaar: 90909090000000
+        });
+
+        user.id = 101;
+        user.address = "banglore";
+        console.log(user);
+        var bank = {
+            bank_name: "ICICI",
+            branch: "Madhapur"
+        }
+        var customer = Object.create(bank);
+
+        customer.name = "kiran";
+        customer.address = "hyd";
+
+        console.log(customer);
+
+        console.log(customer.bank_name);
+        console.log(customer.branch);
+
+    </script>
+
+</body>
+
+</html>
+
+
+Problem Statement:
+
+var players= [
+    {
+        name: "Virat Kohli",
+        runs: 80, 
+        ballsFaced: 80, 
+        strikeRate:100
+    },
+    {
+        name: "Rhoit",
+        runs: 20, 
+        ballsFaced: 10, 
+        strikeRate:200
+    },
+    {
+        name: "KL Rahul",
+        runs: 40, 
+        ballsFaced: 20, 
+        strikeRate:200
+    }
+]
+
+Dynamically read the data and create a table from it. 
+
+ <html>
+
+  <head>
+
+  </head>
+
+  <body>
+
+   <table>
+
+        <thead id="thead"> 
+
+        </thead>
+
+   </table>
+
+  </body>
+
+ </html>
+
+Steps:
+
+
+1. create table header by extracting the first object keys (columns).
+
+ keys(), map(), toString(), replaceAll()
+
+2. iterate through the objects and each object should be represented 
+as table rows. 
+
+values(), map(), toString(), replaceAll()

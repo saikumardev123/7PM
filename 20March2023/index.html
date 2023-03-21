@@ -1,0 +1,65 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <input type="text" id="dateandtime" placeholder="hh:mm:ss dd/mm/yyyy">
+    <button onclick="findDifference()">Submit</button>
+
+    <script>
+
+        function findDifference() {
+            var dateandtime = document.getElementById("dateandtime").value;
+            console.log(dateandtime);
+
+            var dateandtimeArray = dateandtime.split(" ");
+
+            console.log(dateandtimeArray);
+            // 12:20:12 20/03/2023
+
+            var time = dateandtimeArray[0].split(":");
+            console.log(time);
+            var date = new Date();
+            var secondsDifference = date.getSeconds() - time[2];
+            console.log(secondsDifference);
+
+            var minutesDifference = date.getMinutes() - time[1];
+
+            var hoursDifference = date.getHours() - time[0];
+
+            console.log(hoursDifference + " " + minutesDifference + " " + secondsDifference);
+            var userInputDateArray = dateandtimeArray[1].split("/");
+            console.log(userInputDateArray);
+
+            var dateDiff = date.getDate() - userInputDateArray[0];
+            console.log(dateDiff);
+            var monthDiff = (date.getMonth() + 1) - userInputDateArray[1];
+            console.log(monthDiff);
+            var yearDiff = date.getFullYear() - userInputDateArray[2];
+            console.log(yearDiff);
+
+            console.log(dateDiff + " " + monthDiff + " " + yearDiff);
+
+            if (yearDiff != 0) {
+                console.log(yearDiff + "year(s) ago");
+                return;
+            }
+            if (monthDiff != 0) {
+                console.log(monthDiff + "months ago");
+                return;
+            }
+
+            if (dateDiff != 0) {
+                console.log(dateDiff + "days ago");
+                return;
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

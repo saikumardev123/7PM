@@ -1,0 +1,84 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <table border="1" width="100%">
+
+        <thead id="thead">
+
+        </thead>
+
+        <tbody id="tableBody">
+
+
+
+        </tbody>
+
+    </table>
+
+    <script>
+        var players = [
+            {
+                playerName: "Virat Kohli",
+                runs: 80,
+                ballsFaced: 80,
+                strikeRate: 100,
+                average: 10
+            },
+            {
+                playerName: "Rhoit",
+                runs: 20,
+                ballsFaced: 10,
+                strikeRate: 200,
+                average: 10
+            },
+            {
+                playerName: "KL Rahul",
+                runs: 40,
+                ballsFaced: 20,
+                strikeRate: 200,
+                average: 10
+            },
+            {
+                playerName: "KL Rahul",
+                runs: 40,
+                ballsFaced: 20,
+                strikeRate: 200,
+                average: 10
+            }
+        ]
+
+        var playerObject = players[0];
+        var columns = Object.keys(playerObject);
+        console.log(columns);
+        var columnsArray = columns.map(function (column) {
+            return "<th>" + column + "</th>";
+        })
+        console.log(columnsArray.toString().replaceAll(",", ""));
+        document.getElementById("thead").innerHTML = columnsArray.toString().replaceAll(",", "");
+
+
+        var tableBodyData = "";
+
+        players.map(function (player) {
+
+            var playerValues = Object.values(player);
+            var playerValuesArray = playerValues.map(function (playerValue) {
+                return "<td>" + playerValue + "</td>";
+            });
+            console.log(playerValuesArray);
+            tableBodyData = tableBodyData + "<tr>" + playerValuesArray.toString().replaceAll(",", "") + "</tr>";
+        })
+
+        console.log(tableBodyData);
+        document.getElementById("tableBody").innerHTML = tableBodyData;
+
+    </script>
+
+</body>
+
+</html>
