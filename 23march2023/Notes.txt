@@ -1,0 +1,103 @@
+Scopes:
+
+We have 2 types of scopes. 
+
+1. local scope :
+
+local variables will be a part of local scope.
+
+2. global scope :
+
+global variables will be a part of global scope. 
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        var a = 10, b = 20; // global variables
+        function f1() {
+            var c = 30, d = 40; // local variables
+            console.log(c);
+            console.log(d);
+        }
+        f1();
+    </script>
+</body>
+
+</html>
+
+events:
+
+JS provides multiple events to work with dynamic nature of the 
+web pages. 
+
+all the events starts with 'on' prefix such onsubmit, 
+onchange, onmouseover etc..
+
+Problem Statement:
+
+Stop the user from copying and pasting content from a text field. 
+
+oncopy, onpaste events. 
+
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <input type="text" onpaste="return onPasteHandler()" oncopy="return onCopyHandler()" id="accNum"
+        placeholder="account number here">
+      
+
+    <script>
+
+        function onPasteHandler() {
+            alert("cannot be pasted")
+            return false;
+        }
+
+        function onCopyHandler() {
+            alert("cannot be copied")
+            return false;
+        }
+
+    </script>
+</body>
+
+</html>
+
+
+
+PS: Create a list of states (any 4), based on the selection of 
+a state, display a new list with respective cities. 
+
+
+2 dropdowns 
+
+hint: onchange event
+
+
+Problem Statement (Mouse Events): 
+
+mouse related events. 
+
+create an image and when we move our mouse on the image, highlight it 
+and move the mouse out of the image, dehighlight it. 
+
+onmouseover and onmouseout events
+
+
+
+
+
+
+
+

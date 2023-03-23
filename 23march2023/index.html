@@ -1,0 +1,30 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+
+    <img id="image" onmouseover="mouseOverHandler()" onmouseout="onmouseOutHandler()"
+        src="https://rukminim1.flixcart.com/image/200/200/kokdci80/dslr-camera/v/e/x/z-24-200mm-z5-nikon-original-imag2zuekuxgxsgg.jpeg?q=70">
+
+    <script>
+
+        var image = document.getElementById("image");
+
+        function mouseOverHandler() {
+
+            image.width = "210";
+            image.height = "205";
+
+        }
+        function onmouseOutHandler() {
+            image.width = "200";
+            image.height = "200";
+        }
+    </script>
+</body>
+
+</html>
