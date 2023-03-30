@@ -1,0 +1,89 @@
+<html>
+
+<head>
+
+
+</head>
+
+<body>
+
+    <script>
+
+        var password = "sai123";
+
+        var specialCharacters = "!@#$%^&*()_+{}|~<>?";
+
+        var counter = 0;
+
+        var passwordArray = password.split("");
+
+        var resArray = passwordArray.filter(function (value) {
+            return specialCharacters.includes(value);
+        })
+        if (resArray.length == 0) {
+            console.log("atleast 1 special character needed!");
+        }
+        else {
+            console.log("password accepted");
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+Regular Expressions:
+
+Regular Expressions are used to create search patterns. 
+
+RE provide us with the easy patterns that could reduce lot of code 
+for validations. 
+
+syntax:  /<pattern>/<modifier>
+
+
+<html>
+
+<head>
+
+
+</head>
+
+<body>
+
+    <script>
+
+        var str = "hello world!";
+
+        var pattern = /l/g;
+
+        console.log(str.match(pattern).length);
+
+
+    </script>
+</body>
+
+</html>
+
+We have 3 modifiers in REs. 
+
+1. g - global search 
+
+ var str = "hello world!";
+
+        var pattern = /l/g;
+
+        console.log(str.match(pattern).length);
+
+2. i - case insensitive:
+
+        var str = "hello world! LLL";
+        var pattern = /l/gi;
+        console.log(str.match(pattern).length);
+
+brackets:
+
+[abc]:  
+
+

@@ -1,0 +1,55 @@
+Error Handling:
+
+when ever an error occurs the program will be terminated abnormally.
+
+Error handling is the process of skipping the code that is raising an error and 
+executing the rest of code. 
+
+Error handling is not fixing the issue instead we are skipping the part of the code 
+and continuing the rest of the execution. 
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+
+        var a = 100, b = 200;
+        var c;
+
+        console.log(a); // 100
+        try {
+            console.log(c); //
+            console.log(a * a);
+        }
+        catch (error) {
+            console.log(error);
+        }
+        console.log(a + b);
+        console.log("open database connection");
+
+    </script>
+
+</body>
+
+</html>
+
+We handle the exceptions by using try catch mechanism. 
+
+whatever the code that might raise an error, that code should be put in try block.
+
+and try block should have a catch block followed to handle the error. 
+
+   try {
+            console.log(c); //
+            console.log(a * a);
+        }
+        catch (error) {
+            console.log(error);
+        }
+
+

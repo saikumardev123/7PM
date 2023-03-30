@@ -95,6 +95,12 @@ and move the mouse out of the image, dehighlight it.
 onmouseover and onmouseout events
 
 
+event bubbling:
+
+
+
+
+
 
 
 

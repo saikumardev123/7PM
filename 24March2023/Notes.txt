@@ -1,0 +1,115 @@
+Event Bubbling:
+
+It is the default process where the event execution flow goes from 
+bottom to top when the parent elements and the target element(child) have 
+same events. 
+
+event Bubbling can also be called as event propagation.
+
+
+<html>
+
+<head>
+
+    <style>
+        body * {
+            margin: 10px;
+            border: 1px solid blue;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <form onclick="form()">FORM
+        <div onchange="div()">DIV
+            <p onclick="p()">P</p>
+        </div>
+    </form>
+
+    <script>
+        var i = 1;
+        function form() {
+            console.log("form invoked");
+            i++;
+            console.log(i);
+        }
+        function div() {
+            console.log("div invoked");
+            i++;
+            console.log(i);
+        }
+        function p() {
+            console.log("p invoked");
+            i++;
+            console.log(i);
+            event.stopPropagation();
+        }
+    </script>
+</body>
+
+</html>
+
+
+event capturing:
+
+It is a configurable feature where the event propagation happens 
+from top to bottom.
+<html>
+
+<head>
+
+    <style>
+        body * {
+            margin: 10px;
+            border: 1px solid blue;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <form id="form">FORM
+        <div id="div">DIV
+            <p id="p">P</p>
+        </div>
+    </form>
+
+    <script>
+        var form = document.getElementById("form");
+        var div = document.getElementById("div");
+        var p = document.getElementById("p");
+        form.addEventListener('click', function () {
+            alert("form called");
+        }, true)
+        div.addEventListener('click', function () {
+            alert("div called");
+        },true)
+        p.addEventListener('click', function () {
+            alert("p called");
+        },true)
+    </script>
+</body>
+
+</html>
+
+Validations:
+
+Basic Validations:
+
+use js logic
+
+Advanced Validations:
+
+use regular expressions
+
+Problem Statement:
+
+Password validation:
+
+constraints: password should be atleast 8 chars, 1 special char, 1 upper case
+

@@ -1,0 +1,34 @@
+<html>
+
+<head>
+
+
+
+
+</head>
+
+<body>
+
+    <form id="form">FORM
+        <div id="div">DIV
+            <p id="p">P</p>
+        </div>
+    </form>
+
+    <script>
+        var form = document.getElementById("form");
+        var div = document.getElementById("div");
+        var p = document.getElementById("p");
+        form.addEventListener('click', function () {
+            alert("form called");
+        }, true)
+        div.addEventListener('click', function () {
+            alert("div called");
+        }, true)
+        p.addEventListener('click', function () {
+            alert("p called");
+        }, true)
+    </script>
+</body>
+
+</html>

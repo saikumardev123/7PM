@@ -1,0 +1,124 @@
+Meta Characters:
+
+.(dot) - placeholder:
+
+ <script>
+        var str = "R";
+        var pattern = /./;
+        console.log(pattern.test(str));
+    </script>
+
+
+PS: Create a pattern that checks the domain (@gmail.com)
+
+    <script>
+        var str = "sai@gmail.com";
+        var pattern = /@gmail[.]com/;
+        console.log(pattern.test(str));
+    </script>
+
+
+\d:
+
+ <script>
+        var str = "Q1";
+        var pattern = /\d/;
+        console.log(pattern.test(str));
+    </script>
+
+\D:
+
+    <script>
+        var str = "1";
+        var pattern = /\D/;
+        console.log(pattern.test(str));
+    </script>
+
+\s:
+
+<script>
+        var str = "1 ";
+        var pattern = /\s/;
+        console.log(pattern.test(str));
+    </script>
+
+\S:
+
+
+    <script>
+        var str = " a";
+        var pattern = /\S/;
+        console.log(pattern.test(str));
+    </script>
+
+
+PS: Create a validation for password with the following 
+constraints. 
+
+min 1 uppercase, 1 lowercase, 1 special character, 1 digit, min of 8 chars.
+
+  AAAAa&8
+
+Quantifiers:
+
+ n+: should have atleast 1 n. 
+
+   <script>
+        var str = "SAYUYUUUUYUUUUUUUUYUUUUUUUUUUUUUUUUUUK";
+        var pattern = /S[A-Z]+K/;
+        console.log(pattern.test(str));
+    </script>
+
+n*: zero or more occurances.
+
+
+    <script>
+        var str = "SYUMK";
+        var pattern = /S[A-Z]*K/;
+        console.log(pattern.test(str));
+    </script>
+
+n?:
+
+   <script>
+        var str = "SK";
+        var pattern = /S[A-Z]?K/;
+        console.log(pattern.test(str));
+    </script>
+
+
+n{X}: 
+
+<script>
+        var str = "SASDDK";
+        var pattern = /S[A-Z]{3}K/;
+        console.log(pattern.test(str));
+    </script>
+
+n{X,Y}:
+
+ <script>
+        var str = "SASMYK";
+        var pattern = /S[A-Z]{2,3}K/;
+        console.log(pattern.test(str));
+    </script>
+
+
+n{X,}: {2,}
+
+
+^:
+
+ <script>
+        var str = "SASMYK";
+        var pattern = /^S[A-Z]{2,3}K/;
+        console.log(pattern.test(str));
+    </script>
+
+$:
+
+ <script>
+        var str = "SASK";
+        var pattern = /^S[A-Z]{2,3}K$/;
+        console.log(pattern.test(str));
+    </script>
