@@ -1,0 +1,54 @@
+Different types of Errors:
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors
+
+Debugging:
+
+It is the process to find the reason for the bug in 
+the code. 
+
+Browsers provide debugging capabilities. 
+
+Garbage Collection:
+
+Garbage collection is the process where the unused / unreferenced objects 
+are removed from the memory. 
+
+Runtime engine uses garabage collector to collect the 
+garbage from the memory. 
+
+The runtime engine has a threshold(like 80%) , whenever 
+the limit reaches the threshold then runtime engine 
+calls the garbage collector. 
+
+As a developer, we need to write the garbage friendly code. 
+var employee = {
+            name: "kiran"
+        }
+        console.log(employee);
+        employee = null; // nullification 
+        console.log(employee); 
+
+Best coding Practices:
+
+1. Add the comments wherever required. 
+
+2. use meaningful names for variables. 
+
+3. follow the camelCase for functions and make sure 
+the functions are verb. 
+
+4. use tools like JSLint which helps in coding standards. 
+
+5. do not provide multiple functionalities in a 
+single function instead follow single responsbility rule. 
+
+6. The single responsbility rules says not to provide 
+multiple functionalities in a single function. 
+
+7. Do not use == , instead use  ===.
+
+8. use regular expressions instead of javascript logic 
+for the validations. 
+
+9.

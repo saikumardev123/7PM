@@ -52,4 +52,78 @@ and try block should have a catch block followed to handle the error.
             console.log(error);
         }
 
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+
+        var user;
+
+        function fetchUser() {
+            // API Call
+
+            var data;
+            if (data) {
+                user = {
+                    name: "kiran"
+                }
+            }
+        }
+
+        fetchUser();
+        try {
+            console.log("db connection opened");
+            console.log(user.name);
+        }
+        catch (error) {
+            console.log(error);
+            // throw new Error("Unexpected error occured");
+        }
+        finally {
+            console.log("closing db");
+        }
+        var employee = {};
+        employee.name = "raju";
+        console.log(employee);
+
+        function getKeys(object) {
+            // logic 
+            console.log(object instanceof Object);
+            if (object instanceof Object) {
+                var keys = Object.keys(object);
+                return keys;
+            }
+            else {
+                throw new Error("Invalid input");
+            }
+        }
+        var customer = {
+            cid: 101,
+            name: "kiran",
+            address: "hyd",
+            balance: "9999"
+        }
+        try {
+            var k = getKeys();
+            console.log(k);
+        }
+        catch (error) {
+            console.log(error);
+        }
+
+
+        console.log("kjhsjskjv");
+
+
+    </script>
+
+</body>
+
+</html>
+
 
