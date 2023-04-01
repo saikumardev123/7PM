@@ -1,0 +1,140 @@
+DOM: Document Object Model 
+
+Methods:
+
+DOM provides different methods to perform dynamic operations. 
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <input type="text" id="username">
+    <p>This is a paragraph!</p>
+    <h1 class="hello">Hello World</h1>
+    <h2 name="user">Hello World</h1>
+        <button onclick="capture()">Capture</button>
+
+        <script>
+            function capture() {
+
+                var username = document.getElementById("username");
+                console.log(username.value);
+                var ptags = document.getElementsByTagName("p");
+                console.log(ptags);
+                ptags[0].style.color = "red";
+
+                // getElementsByClassName, getElementsByName
+
+
+            }
+        </script>
+
+</body>
+
+</html>
+
+Events,Event Listener:
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <button>Capture</button>
+
+    <script>
+
+        var buttons = document.getElementsByTagName("button");
+        console.log(buttons[0]);
+        buttons[0].onclick = capture;
+        // event handler
+        function capture() {
+            alert("Good Evening!");
+        }
+    </script>
+
+</body>
+
+</html>
+
+Navigation:
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <button>Capture</button>
+
+    <script>
+
+        document.body.firstChild.nextSibling.onclick = function () {
+            alert("hello");
+        }
+        // Get to know more properties
+    </script>
+</body>
+
+</html>
+
+Nodes:
+
+When it comes to DOM, every html element is considered as a node. 
+we can create, update, delete and list all the nodes using DOM. 
+
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+
+        var form = document.createElement("form");
+        console.log(form);
+
+        var username = document.createElement("input");
+        username.id = "username";
+        username.placeholder = "enter username here";
+        username.type = "text";
+        console.log(username);
+
+        var password = document.createElement("input");
+        password.id = "password";
+        password.placeholder = "enter password here";
+        password.type = "password";
+
+        var button = document.createElement("button");
+        button.innerHTML = "Login";
+        console.log(password);
+        form.appendChild(username);
+        form.appendChild(password);
+        form.appendChild(button);
+        console.log(form);
+        var body = document.getElementsByTagName("body");
+        body[0].appendChild(form);
+
+    </script>
+
+</body>
+
+</html>
+
+Collections and Nodelists are the datatypes used by DOM to provide the 
+list of items. 
+
+SELF LEARN: Find the differences between Collections and Nodelists.
+
+https://www.w3schools.com/js/js_htmldom_nodelist.asp
