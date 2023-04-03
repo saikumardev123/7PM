@@ -1,0 +1,211 @@
+
+ES6 - ECMAScript Version 6. 
+
+There are no major changes from ES5 TO ES6 instead we will 
+have some new features and updates related to some 
+exisiting features of ES5. 
+
+http://es6-features.org/#Constants 
+
+
+DIFFERENCES Between let / const / var :
+
+using var , we can create global and local variables.
+
+
+var: 
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+
+
+
+    <script>
+
+        // let- const - var
+        function f1() {
+
+            var a = 100;
+            console.log(a); //100
+
+            if (a > 10) {
+                var a = 900;
+                console.log(a); // 900
+            }
+            console.log(a); // 900
+        }
+        f1();
+
+        /*
+
+            After Variable Hositing:
+
+
+        function f1() {
+               var a;
+             a = 100;
+            console.log(a); //100
+
+            if (a > 10) {
+                 a = 900;
+                console.log(a); // 900
+            }
+            console.log(a); // 900
+        }
+        f1();
+
+        */
+    </script>
+
+</body>
+
+</html>
+
+
+let: 
+
+using let we can create block scoped variables. 
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+        // let- const - var
+        function f1() {
+            var a = 100;
+            console.log(a); //100
+            if (a > 10) {
+                let a = 900;
+                console.log(a); // 900
+            }
+            console.log(a); // 
+        }
+        f1();
+    </script>
+
+</body>
+
+</html>
+
+Using let keyword we can always create a block scoped variable. 
+
+const: 
+
+const keyword can be used to avoid reassignment of values. 
+
+
+ const a = 100;
+        console.log(a);
+        a = a + 1;
+        console.log(a); // error
+
+
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+
+        const user = {
+            name: "kiran",
+            address: "hyderabad"
+        }
+        console.log(user);
+        user.name = "rajesh";
+        user = null;
+        console.log(user.name); // r or k or error?
+
+
+    </script>
+
+</body>
+
+</html>
+
+
+PS: Create a const array and check if we can update the content or not. 
+
+
+        const user = [1, 2, 3, 4];
+        console.log(user);
+        user.push(10);
+        user = [];
+        console.log(user);
+
+Arrow functions: 
+
+
+An arrow function is a syntactical change w.r.t functions. 
+
+To improve / save some lines of code w.r.t functions, es6 introduced arrow functions. 
+
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+
+        function square(num) {
+            return num * num;
+        }
+        console.log(square(10));
+        var sqr = num => num * num;
+        console.log(sqr(2));
+
+
+    </script>
+
+</body>
+
+</html>
+
+
+
+PS: create a function that takes opt(num) and cross check with some dummy value and return the result. 
+
+do it in ES5 and ES6 (using arrow functions).
+
+
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+        var otp = num => num == "1234";
+        console.log(otp(12341));
+    </script>
+
+</body>
+
+</html>
+
+PS: Create arrow function for username and password check in a single line. 
+
+var user = (username,password) => username == 'mounika' && password == '1234';
+
+        console.log(user('mounika', '1234'));
