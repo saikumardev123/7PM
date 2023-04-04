@@ -1,0 +1,88 @@
+Default Parameter Values:
+
+        // default parameter values in es5
+        function f1(a, b) {
+            if (a == undefined) {
+                a = 10;
+            }
+            if (b == undefined) {
+                b = 30;
+            }
+            console.log(a, b);
+        }
+        f1(30, 60);
+        // default parameter values in es6 
+        function f2(a = 10, b = 20) {
+            console.log(a, b);
+        }
+        f2(7,8);
+
+Rest parameter:
+ function f2(a, b, c, ...restparams) {
+            console.log(a, b, c);
+            console.log(restparams);
+
+        }
+        f2(7, 8, 9, 30, 40, 50);
+
+
+Spread Operator:
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+
+        function f2(a, b, c) {
+            console.log(a, b, c);
+        }
+        var arr = [1, 2, 3]
+        f2(arr[0], arr[1], arr[2]);
+        f2(...arr); // spread operator - it spreads the array and assigns the values.
+    </script>
+</body>
+
+</html>
+
+String Interpolation:
+
+Problem Statement: 
+
+ create a string that prints the content in the below format. 
+
+  Hello  Rahul, 
+
+                  You have been promoted to lead full stack developer and 
+                  your ctc is revised. 
+
+    Thanks,
+    HR Team 
+
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+
+        var str = `Hello  Rahul, 
+                         
+              You have been promoted to lead full stack developer and your ctc is revised. 
+
+                Thanks,
+                HR Team
+
+`;
+        console.log(str);
+
+    </script>
+</body>
+
+</html>
