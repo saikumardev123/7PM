@@ -1,0 +1,35 @@
+Modules: 
+
+imports and exports
+
+
+
+PS: 
+
+File1.js 
+
+fun1
+
+File2.js 
+
+fun2 
+
+File3.js 
+fun3
+
+index.js:
+
+import all 3 functions and use them.
+
+
+class:
+
+A class is a blueprint / design of an realtime object and we create classes to 
+define multiple objects. 
+
+syntax: 
+
+class class_name{
+   // variables 
+   // methods
+}

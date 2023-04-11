@@ -1,0 +1,138 @@
+Custom Interpolation:
+
+In String Interpolation, we can write free style of text. however,we need 
+to include some dynamic content in to the String, then we need to use 
+custom interpolation. 
+
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+
+        var name = "Rajesh";
+        var role = "Lead Full Stack Developer";
+        var regards = "Kiran";
+
+        var str = `Hello ${name}, 
+                         
+              You have been promoted to ${role} and your ctc is revised. 
+
+                Thanks,
+               ${regards}
+
+`;
+
+        console.log(str);
+
+
+    </script>
+
+</body>
+
+</html>
+var employees = [
+    {
+        name: "kiran", 
+        hike:"10%",
+        role: "full stack dev", 
+        currentCTC: "10LPA", 
+        revisedCTC: "11LPA", 
+        manager: "Rajesh"
+    },
+    {
+        name: "Nikhil", 
+        hike:"100%",
+        role: " junior full stack dev", 
+        currentCTC: "3LPA", 
+        revisedCTC: "6LPA", 
+        manager: "Anil"
+    },
+    {
+        name: "Anil", 
+        hike:"5%",
+        role: "manager", 
+        currentCTC: "20LPA", 
+        revisedCTC: "21LPA", 
+        manager: "Nitish"
+    }
+]
+
+Create a template and iterate the array by dynamically passing the values 
+using custom interpolation. 
+
+
+ Hello <>, 
+
+   your hike is <>, The current ctc is <> and revised is <>. 
+
+   Your role is <>. 
+
+   Thanks, 
+   <manager>
+
+<script>
+    var employees = [
+    {
+        name: "kiran", 
+        hike:"10%",
+        role: "full stack dev", 
+        currentCTC: "10LPA", 
+        revisedCTC: "11LPA", 
+        manager: "Rajesh"
+    },
+    {
+        name: "Nikhil", 
+        hike:"100%",
+        role: " junior full stack dev", 
+        currentCTC: "3LPA", 
+        revisedCTC: "6LPA", 
+        manager: "Anil"
+    },
+    {
+        name: "Anil", 
+        hike:"5%",
+        role: "manager", 
+        currentCTC: "20LPA", 
+        revisedCTC: "21LPA", 
+        manager: "Nitish"
+    }
+];
+
+     employees.map((employee)=>{
+       var template = `Hello ${employee.name}, 
+your hike is ${employee.hike}, The current ctc is ${employee.currentCTC} and revised is ${employee.revisedCTC}. 
+Your role is ${employee.role}. 
+Thanks, 
+${employee.manager}`;
+console.log(template);
+     });
+
+
+    </script>
+
+
+
+Environment Setup: 
+
+
+1. install nodejs 
+
+open new cmd:
+
+2. check -> node -v 
+
+3. check -> npm -v 
+
+4. npx create-react-app <firstapp> 
+
+5. cd firstapp 
+
+6. npm start - index.js 
+
+

@@ -1,0 +1,19 @@
+React: 
+
+React.js is a front end library which is used to develop resuable user interface 
+components. 
+
+React.js is popular because of its faster loading of content/ data on the UI. 
+
+As a modern library, it needs to support Single Page Application.
+
+Any Application that we create using react will be called as package. 
+
+npm: node package manager - manages the developed / developing packages. 
+
+npx: node package execute - used to create any application without installing the 
+software globally. 
+
+
+
+
