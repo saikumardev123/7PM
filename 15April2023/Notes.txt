@@ -1,0 +1,19 @@
+PSTMT: 
+
+App 
+
+
+Employee (employee object) -> send data from Employee Comp to App Component 
+and display in the console.
+
+
+PS: 
+
+Create a contact form, 
+
+mobile number
+email 
+description
+
+on click of submit display the captured data on the console.
+

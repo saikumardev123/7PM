@@ -1,0 +1,7 @@
+Components Interaction:
+
+There are some usecase where a parent component needs to send data to child 
+component  and vice versa. 
+
+We use props concept to send data from one component to another component.
+
