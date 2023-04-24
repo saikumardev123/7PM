@@ -14,19 +14,32 @@ function App() {
     selectedVideo: null
   });
 
+  const makeAPIcall = (term) => {
+    YTSearch({ term: term, key: 'AIzaSyB9IiXo3-sPL6sj-N5CMJKq2l5oEDmOVio' }, (data) => {
+      console.log("data", data);
+      setVideosData({ ...videosData, videos: data, selectedVideo: data[0] });
+    })
+
+  }
+
   useEffect(
     () => {
-      YTSearch({ term: 'digital lync', key: 'AIzaSyB9IiXo3-sPL6sj-N5CMJKq2l5oEDmOVio' }, (data) => {
-        console.log("data", data);
-        setVideosData({ ...videosData, videos: data });
-      })
-    },
+      makeAPIcall('java')
+    }
+    ,
     []
   )
   return (
     <div className="App">
 
       {videosData.videos.length}
+
+      <SearchBar onSearch = {
+        (searchTerm) =>{
+                makeAPIcall(searchTerm);
+        }
+      }></SearchBar>
+      <VideoPlayer video={videosData.selectedVideo}></VideoPlayer>
 
       <VideoList videos={videosData.videos}></VideoList>
 

@@ -1,10 +1,19 @@
-function VideoPlayer() {
-    return (
+function VideoPlayer(props) {
+    if (props.video) {
+        let videoUrl = `https://www.youtube.com/embed/${props.video.id.videoId}`;
+        return (
+            <div>
+
+                <iframe width="560" height="315" src={videoUrl} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+
+            </div>
+        )
+    }
+    else {
         <div>
-
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/20elYWz-unI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+            <h1>Loading......</h1>
         </div>
-    )
+    }
+
 }
 export default VideoPlayer;
