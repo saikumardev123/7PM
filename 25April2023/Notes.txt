@@ -1,0 +1,51 @@
+Composition vs Inheritance:
+
+Inheritance:
+
+It is the process of resusing the resources of one class in another 
+class. 
+
+A class extends another class to use the resources. 
+
+
+class A{
+
+}
+class C{
+
+}
+class B extends A,C{
+
+}
+
+
+Composition:
+
+It also the process of resuing the resources but Composition does not 
+allow extension of resources instead inclusion of resources is done. 
+
+
+class A{
+
+}
+class B{
+
+}
+class C{
+
+}
+class D{
+       A;
+       B;
+       C;
+       D;
+}
+
+
+Single Page Application:
+
+Refer the code
+
+Web Services:
+
+

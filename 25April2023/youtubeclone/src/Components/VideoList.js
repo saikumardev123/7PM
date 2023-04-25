@@ -3,7 +3,7 @@ function VideoList(props) {
     const renderList = () => {
         let x = props.videos.map(video => {
             return <li style={{ cursor: 'pointer' }} onClick={() => {
-                alert("I am clicked")
+
                 props.onVideoClick(video)
             }} key={video.etag}><img src={video.snippet.thumbnails.default.url}></img></li>
         })

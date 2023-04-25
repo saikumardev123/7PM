@@ -40,7 +40,7 @@ function App() {
       <VideoPlayer video={videosData.selectedVideo}></VideoPlayer>
 
       <VideoList onVideoClick={(video) => {
-        alert("selected");
+
         setVideosData({
           ...videosData, selectedVideo: video
         })
