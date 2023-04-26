@@ -46,6 +46,6 @@ Single Page Application:
 
 Refer the code
 
-Web Services:
+
 
 
