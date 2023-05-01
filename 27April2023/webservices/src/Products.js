@@ -1,7 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import './App.css';
 function Products() {
+
+    const [products, setProducts] = useState([]);
     const [product, setProduct] = useState(
         {
             "name": "",
@@ -12,16 +14,29 @@ function Products() {
             "seller": ""
         }
     )
-    const [products, setProducts] = useState([]);
     const updateState = (event) => {
         var value = event.target.value;
         var name = event.target.name;
         setProduct({ ...product, [name]: value })
     }
-    useEffect(() => {
-        console.log("component did mount");
+
+    const getProducts = () => {
+        console.log("get products");
+        axios.get("https://crudcrud.com/api/2fd5f5f089904cfabf043644bdff60c3/poduct").then(
+            response => {
+                console.log(response);
+            },
+            error => {
+                console.log(error);
+            }
+        )
+    }
+
+    useState(() => {
         getProducts();
     }, [])
+
+
 
     const addProduct = (event) => {
         event.preventDefault();
@@ -34,17 +49,6 @@ function Products() {
                 console.log(error);
             }
         );
-    }
-    const getProducts = (event) => {
-        console.log("get products");
-        axios.get("https://crudcrud.com/api/2fd5f5f089904cfabf043644bdff60c3/poduct").then(
-            response => {
-                console.log(response);
-            },
-            error => {
-                console.log(error);
-            }
-        )
     }
     return (
         <div>

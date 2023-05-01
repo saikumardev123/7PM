@@ -1,0 +1,16 @@
+Context:
+
+Context is used to maintain some global data so that any component in the application can access the 
+data directly without using props. 
+
+                App (data - user details)
+
+          A           B 
+
+        X 
+
+     Y 
+
+    Z
+  
+  M
