@@ -1,0 +1,24 @@
+
+     
+                App (data) - Logic
+
+
+            Users
+
+
+
+
+
+Higher Order Components:
+
+HOCs are used to create a component that provides resuable logic 
+to other components.
+
+HOC is a function that takes a component as an input and 
+return a new component by providing some functionalities.
+
+
+
+
+
+
