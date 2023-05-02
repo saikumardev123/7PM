@@ -19,6 +19,41 @@ return a new component by providing some functionalities.
 
 
 
+Redux: 
+
+Redux is a library which is used to implement application state management. 
+
+Redux seperates out the logic of the application vs the UI Representation. 
+
+The data management will be taken care by Redux and React takes care of displaying the content on the UI.
+
+To work with redux, we need to install redux and react-redux libraries.
+
+Redux Terminology:
+
+1. Store : Maintains the application state.
+
+2. Root Reducer: Root reducer is responsible to prepare the application state.
+
+3. Reducer : Reducer is responsible to generate a part of application state.
+
+4. Action : When user makes an action (clicking on a button), then the action takes care of handling it. 
+
+Mostly, we will make API calls using actions 
+
+5. Container: Any component that interacts with redux can be considered as Container. 
+
+
+
+Workflow:
+
+Container -> Action -> Reducer -> Root Reducer -> Store
+
+Any component that wants to access the application data, will interact with store.
+
+
+
+
 
 
 
