@@ -1,0 +1,30 @@
+React :
+
+Strength: Updating/displaying the content on the UI in a lightning speed.
+
+React is not developed for the purpose of data management.
+
+
+Redux: 
+
+Redux is a application state management library used to manage the application data. 
+
+Store: Is the place where the application state is available.
+
+root reducer: responsible to gather multiple reducers and put all the reducers under one object(application state) and 
+provide it to Store.
+
+reducer: responsible to gather the data from action.
+
+
+action: responsible to prepare the data (make API call and gather the data) and send it to reducer
+
+container: its a component, which is responsible to connect the action with the user action.
+
+It follows a simple workflow:
+
+
+Container -> action -> reducer -> root reducer -> store 
+
+Container -> store 
+
